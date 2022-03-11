@@ -3,31 +3,104 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 0 7.5%;
 
   &__input-container {
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 2px rgb(295, 191, 199) solid;
+    padding-top: 7%;
+    padding-bottom: 3.5%;
+    border-radius: 10px;
+  }
+
+  &__inputs {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
+  &__instructions {
+    text-align: center;
+    margin-bottom: 5%;
+    padding: 1.25% 0;
+    color: white;
+    background-color: rgb(295, 191, 199);
+  }
+
+  &__cta {
+    position: fixed;
+    z-index: 1;
+    width: 60%;
+    top: 200px;
+  }
+
   &__input {
-    width: 3rem;
-    height: 3rem;
-    margin: 0 2.5%;
-    border: 1px black solid;
+    width: 10%;
+    height: 3.25rem;
+    margin: 0 2%;
+    border: 1px lightgrey solid;
     border-radius: 5px;
+    font-size: 4rem;
+    padding: 2.5%;
+    color: grey;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--true {
+      background-color: green;
+      color: white;
+    }
   }
 
   &__button-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin: 10% 0;
+    margin: 5% 0;
+  }
+
+  &__submit {
+    height: 4rem;
+    margin: 5% 0;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(111, 207, 235);
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    &:hover {
+      background-color: rgb(295, 191, 199);
+    }
+  }
+
+  &__skip {
+    height: 4rem;
+    border-radius: 50px;
+    background-color: white;
+    border: rgb(111, 207, 235) 2px solid;
+    color: rgb(111, 207, 235);
+    font-size: 1.15rem;
+    font-weight: 600;
+    &:hover {
+      background-color: white;
+      color: rgb(295, 191, 199);
+      border: rgb(295, 191, 199) 2px solid;
+    }
   }
 
   &__scrambled-word {
     margin: 10% 0;
     background-color: rgb(295, 191, 199);
+    padding: 2.5% 5%;
+    border-radius: 5px;
+    position: absolute;
+    top: 155px;
+    color: white;
+    font-size: 1.15rem;
+    text-transform: uppercase;
   }
 }
