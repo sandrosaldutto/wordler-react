@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getData = {
-  getWords: () => axios.get(`http://localhost:8080/words`),
+  getWords: () => axios.get(`https://wordler-server.herokuapp.com`),
 };
 
 export default getData;
