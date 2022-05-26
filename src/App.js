@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Logo/>
       <BrowserRouter>
         <Route path="/" exact component={WordForm}/>

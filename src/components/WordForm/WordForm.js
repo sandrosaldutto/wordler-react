@@ -125,7 +125,7 @@ class WordInput extends Component {
         ) : (
           ""
         )}
-        <h3 className="form__scrambled-word">{this.state.question}</h3>
+         <h3 className="form__scrambled-word">{this.state.question}</h3>
         <form className="form__container" onSubmit={this.handleSubmit}>
           <div className="form__input-container">
             <p className="form__instructions">Unscramble the word above.</p>
