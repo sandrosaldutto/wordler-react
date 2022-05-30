@@ -1,3 +1,7 @@
+
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .logo {
   display: flex;
   justify-content: center;
@@ -5,5 +9,10 @@
   &__image {
     width: 65%;
     margin: 20%;
+
+    @include tablet {
+      width: 30%;
+      margin: 10%;
+    }
   }
 }
