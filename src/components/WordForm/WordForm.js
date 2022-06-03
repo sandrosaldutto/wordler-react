@@ -33,8 +33,6 @@ class WordInput extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.currentWord.charAt(1));
-    console.log(e.target.input2.value);
     if (this.state.currentWord.charAt(0) === e.target.input1.value) {
       this.setState({
         letter1: true,
