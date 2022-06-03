@@ -33,6 +33,7 @@ class WordInput extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
     if (this.state.currentWord.charAt(0) === e.target.input1.value) {
       this.setState({
         letter1: true,
@@ -184,7 +185,7 @@ class WordInput extends Component {
             <button onClick={this.handleSkip} className="form__skip">
               Skip
             </button>
-            <button className="form__submit">Submit</button>
+            <button type="submit" value="submit" className="form__submit">Submit</button>
           </div>
         </form>
       </section>
