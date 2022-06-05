@@ -3,6 +3,7 @@ import "./WordForm.scss";
 import getData from "../../components/utils/api";
 import cta from "../../assets/cta.svg";
 import { useEffect, useState } from "react"
+import WordlerUI from "../WordlerUI/WordlerUI"
 
 // function randomWord(array) {
 //   const random = Math.floor(Math.random() * array.length);
@@ -10,21 +11,24 @@ import { useEffect, useState } from "react"
 // }
 
 function WordForm () {
-
-  const [word, setWord] = useState(null)
+  const [question, setQuestion] = useState(null)
+  const [answer, setAnswer] = useState(null)
 
   useEffect (() => {
     fetch("https://wordler-server.herokuapp.com/words")
     .then(res => res.json())
     .then(words => {
       const randomWord = words[Math.floor(Math.random() * words.length)]
-      setWord(randomWord.question)
+      setAnswer(randomWord.answer)
+      setQuestion( randomWord.question)
     })
-  }, [setWord])
+  }, [setAnswer, setQuestion])
 
   return (
     <section className="form">
-        {word && <h3 className="form__scrambled-word"> { word }</h3>}
+        {question && <h3 className="form__scrambled-word"> { question }</h3>}
+
+        {answer && <WordlerUI answer={ answer }/>}
         {/* <form className="form__container">
           <div className="form__input-container">
             <p className="form__instructions">Unscramble the word above.</p>
