@@ -18,7 +18,7 @@ export default function WordlerUI({ answer }) {
 
   return (
   <>
-  <div>current guess - {currentGuess}</div>
+  {/* <div>current guess - {currentGuess}</div> */}
   <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
   </>
   )
