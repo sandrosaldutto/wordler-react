@@ -69,7 +69,8 @@ class WordInput extends Component {
     } else {
       return;
     }
-    this.showCTA()
+    
+    this.showCTA();
 
     e.target.input1.value = "";
     e.target.input2.value = "";
@@ -124,7 +125,7 @@ class WordInput extends Component {
         ) : (
           ""
         )}
-         <h3 className="form__scrambled-word">{this.state.question}</h3>
+        <h3 className="form__scrambled-word">{this.state.question}</h3>
         <form className="form__container" onSubmit={this.handleSubmit}>
           <div className="form__input-container">
             <p className="form__instructions">Unscramble the word above.</p>
@@ -185,7 +186,9 @@ class WordInput extends Component {
             <button onClick={this.handleSkip} className="form__skip">
               Skip
             </button>
-            <button type="submit" value="submit" className="form__submit">Submit</button>
+            <button type="submit" className="form__submit">
+              Submit
+            </button>
           </div>
         </form>
       </section>
