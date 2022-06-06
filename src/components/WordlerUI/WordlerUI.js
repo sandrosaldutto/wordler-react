@@ -33,7 +33,7 @@ export default function WordlerUI({ answer }) {
   {/* <div>current guess - {currentGuess}</div> */}
   <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
   {showModal && <Modal isCorrect={isCorrect} turn={turn} answer={answer}/>}
-  <KeyPad usedKeys={usedKeys}/>
+  <KeyPad usedKeys={usedKeys} handleKeyup={handleKeyup}/>
   </>
   )
 }
