@@ -6,6 +6,7 @@ const useWordler = (answer) => {
   const [guesses, setGuesses] = useState([...Array(6)]) // each guess is an array
   const [history, setHistory] = useState([]) // each guess is a string
   const [isCorrect, setIsCorrect] = useState(false)
+  const [usedKeys, setUsedKeys] = useState({})
 
   
   const formatGuess = () => {
@@ -41,6 +42,24 @@ const useWordler = (answer) => {
     setTurn(prevTurn => {
       return prevTurn + 1
     })
+    setUsedKeys((prevUsedKeys) => {
+      let newKeys = {...prevUsedKeys}
+
+      formattedGuess.forEach((letter) => {
+        const currentColor = newKeys[letter.key]
+
+        if(letter.color === "green") {
+          newKeys[letter.key] = "green"
+          return
+        }
+
+        if(letter.color === "grey" && currentColor !== "green") {
+          newKeys[letter.key] = "grey"
+          return
+        }
+      })
+      return newKeys
+    })
     setCurrentGuess('')
   }
 
@@ -75,7 +94,7 @@ const useWordler = (answer) => {
     }
   }
 
-  return {turn, currentGuess, guesses, isCorrect, handleKeyup}
+  return {turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyup}
 }
 
 export default useWordler

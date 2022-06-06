@@ -3,9 +3,10 @@ import useWordler from "../../hooks/useWordler";
 import { useEffect, useState } from "react";
 import Grid from "../Grid/Grid";
 import Modal from "../Modal/Modal"
+import KeyPad from "../KeyPad/KeyPad"
 
 export default function WordlerUI({ answer }) {
-  const { currentGuess, guesses, turn, isCorrect, handleKeyup } = useWordler(answer);
+  const { currentGuess, guesses, turn, isCorrect, handleKeyup, usedKeys } = useWordler(answer);
   const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
@@ -32,6 +33,7 @@ export default function WordlerUI({ answer }) {
   {/* <div>current guess - {currentGuess}</div> */}
   <Grid currentGuess={currentGuess} guesses={guesses} turn={turn}/>
   {showModal && <Modal isCorrect={isCorrect} turn={turn} answer={answer}/>}
+  <KeyPad usedKeys={usedKeys}/>
   </>
   )
 }
