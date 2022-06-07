@@ -8,7 +8,7 @@
   display: flex;
   width: 40px;
   height: 40px;
-  border: 1px solid #bbb;
+  border: 1px solid lightgrey;
   margin: 4px;
   justify-content: center;
   align-items: center;
@@ -55,13 +55,13 @@
   0% {
     transform: rotateX(0);
     background: #fff;
-    border-color: #333;
+    border-color: lightgrey;
   }
   
   45% {
     transform: rotateX(90DEG);
     background: #fff;
-    border-color: #333;
+    border-color: lightgrey;
   }
 
   55% {

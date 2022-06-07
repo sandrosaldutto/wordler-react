@@ -5,14 +5,15 @@
 .logo {
   display: flex;
   justify-content: center;
+  
 
   &__image {
-    width: 12rem;
-    margin: 2rem;
+    width: 7.56rem;
+    margin: 1rem;
 
     @include tablet {
-      width: 15rem;
-      margin: 4rem;
+      width: 12rem;
+      margin: 2rem;
     }
   }
 }
