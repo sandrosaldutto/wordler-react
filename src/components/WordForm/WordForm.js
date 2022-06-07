@@ -19,6 +19,7 @@ function WordForm () {
   return (
     <section className="form">
         {question && <h3 className="form__scrambled-word"> { question }</h3>}
+        <h3 className="form__instructions">Unscramble the word above.</h3>
 
         {answer && <WordlerUI answer={ answer }/>}
       </section>
