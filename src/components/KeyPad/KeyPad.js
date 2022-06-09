@@ -26,8 +26,8 @@ export default function Keypad( { usedKeys, handleKeyup } ) {
             const color = usedKeys[letter.key]
         return (
           <button onClick={(e) => handleKeyClick(letter.key, e)} key={letter.key} className={color} >{letter.key}</button>
-        )
-      })}
+          )
+        })}
       </div> 
     )
   }
